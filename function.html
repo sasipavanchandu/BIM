@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+<body aligin ="center">
+    <div id= "container">
+        <div id= "Calculator">
+            <h1>CALCULATE BODY MASS INDEX</h1>
+            <input type="text" placeholder="weight in KG" id="weight"><br>
+            <input type="text" placeholder="height in INC" id="height"><br>
+            <input type="submit" value="calcualte" id="calcualte">
+            <div id ="YOURBMI"> Your BMI IS:</div>
+        </div>
+    </div>
+    <script>
+        const weight = document.querySelector('#height');
+        const height = document.querySelector('#height');
+        const calcualte = document.querySelector('#calcualte');
+        const YOURBMI = document.querySelector('#YOURBMI');
+        calcualte.addEventListener("click", function(){
+            let value = weight.value/(height.value*height.value)*1000;
+             YOURBMI.innerHTML =`Your BMI IS :${value.toFixed(2)}`
+        });
+    </script>
+    
+</body>
+</html>
